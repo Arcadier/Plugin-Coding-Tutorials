@@ -102,6 +102,7 @@ if($('#merchantId') && $('#merchantId').length && $('body').hasClass('item-detai
 })
 ```
 <p align="center">OR (to add the link on the cart page):</p>
+
 ```javascript
 if($('#merchantId') && $('#merchantId').length && $('body').hasClass('page-cart')){
   if('input').each(function(){
