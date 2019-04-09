@@ -17,6 +17,7 @@ if($('body').hasClass('item-detail-page')){  //if the page is the item detail pa
 Then, as from here, you can continue writing your script to speciffy what happens when the button is clicked, and where do the changes occur.
 
 In this example, for completely random reasons, it creates a table. So, to create a table on click:
+
 ```javascript
  $("#check").click(function() { //this function triggers when the button with id="check" is clicked
       var container2 = document.querySelector(".item-detail-right"),
@@ -41,4 +42,4 @@ In this example, for completely random reasons, it creates a table. So, to creat
       }
       container2.appendChild(tbl);
     });
-    ```
+```
