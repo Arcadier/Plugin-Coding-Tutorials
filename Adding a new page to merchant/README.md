@@ -65,3 +65,49 @@ their respective directories:
 
 <p align="center"><img src="https://drive.google.com/uc?id=1Y-Lqp0aSB69ukqjUWiRCnoiz9HreJv1L"/></p>
 
+## Adding a page for all merchants on a specific type of marketplace (bespoke/spacetime), accessible from any page. ##
+* The additional restriction we have here we have for this section is making that page accessible from a merchant’s portal only, for bespoke marketplaces. We write that restriction in JavaScript using:
+```javascript
+if($('#merchantId') && $('#merchantId').length){
+  if('input').each(function(){
+    if($(this).attr('value') == 'bespoke'){
+      //do something
+    }
+  })
+})
+```
+* For spacetime marketplaces:
+```javascript
+if($('#merchantId') && $('#merchantId').length){
+  if('input').each(function(){
+    if($(this).attr('value') == 'spacetime'){
+      //do something
+    }
+  })
+})
+```
+## Adding a page for all merchants on a specific type of marketplace (bespoke/spacetime), accessible from a specific page. ##
+
+* The additional restriction we have here we have for this section is making that page
+accessible from a merchant’s portal only, for bespoke marketplaces, on a specific page. For
+example, we want merchants to be able to access the page when they visit the item details
+page of their bespoke marketplace. We write that restriction in JavaScript using:
+```javascript
+if($('#merchantId') && $('#merchantId').length && $('body').hasClass('item-detail-page')){
+  if('input').each(function(){
+    if($(this).attr('value') == 'spacetime'){
+      //do something
+    }
+  })
+})
+```
+<p align="center">OR (to add the link on the cart page):</p>
+```javascript
+if($('#merchantId') && $('#merchantId').length && $('body').hasClass('page-cart')){
+  if('input').each(function(){
+    if($(this).attr('value') == 'spacetime'){
+      //do something
+    }
+  })
+})
+```
