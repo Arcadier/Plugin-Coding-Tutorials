@@ -1,4 +1,4 @@
-### Selecting on which page and for which user my code executes ##
+## Selecting on which page and for which user my code executes ##
 
 #### Admin ####
 For admins, the task gets really easy. First, the code that’s supposed to run for admins is
@@ -11,7 +11,7 @@ if(pathname.indexOf(admin) > -1){
   //do something
 }
 ```
-#### Choosing to execute the script only for merchants:
+#### Choosing to execute the script only for `merchants`:
 ```javascript
 if($('#merchanId') && $('#merchantId').length){ 
   //do something
