@@ -32,7 +32,7 @@ no merchantId.
 Next, we decide where we want the link for the page to be on the buyer pages. In this example, we
 want the link to be on the header. This can be coded like this:
 
-```HTML
+```javascript
 var a = document.createElement("a"); 
         a.href = "https://" + hostname + "/user/plugins/" + packageId + "/link.html";
         a.innerHTML = "Link"; 
@@ -44,9 +44,6 @@ var a = document.createElement("a");
         var c = document.querySelector("ul.navigation");
             c.insertBefore(b, document.querySelector(.dropdown));
 ```
-The reason for lines 18 and 19 is because those are the names of the elements we want the link to
-be present in:
-
 <p align="center">
   <img src="https://drive.google.com/uc?id=1pwtdMfJkJXC3HKpe_zhwxvOgjgASd2jo"/>
 </p>
