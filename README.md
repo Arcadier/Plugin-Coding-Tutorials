@@ -40,8 +40,7 @@ if($('#merchantId') && $('#merchantId').length && $("body").hasClass("item-detai
   })
 }
 ```
-#### Choosing to execute a script `only for buyers` on `item-details page` of `Bespoke` marketplaces
-only.
+#### Choosing to execute a script `only for buyers` on `item-details page` of `Bespoke` marketplaces only.
 Merchants and buyers have only 1 thing in common:
 ```html
 <input type = “hidden” id = “userId” value= “(somevalue)”>"</p>
@@ -50,7 +49,7 @@ But buyers don’t have:
 ```html
 <input type = “hidden” id = “merchantId” value= “(somevalue)”>
 ```
-That’s why if we want to execute a script strictly for buyers, we write the line 2-3 to return 0
+That’s why if we want to execute a script strictly for buyers, we write return 0
 if a `“merchantId”` id is found.
 ```javascript
 if($('#merchantId') && $('#merchantId').length){
