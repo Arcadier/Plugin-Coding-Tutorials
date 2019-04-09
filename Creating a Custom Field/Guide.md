@@ -36,7 +36,7 @@ First we get the user input. In this case, we want it in the admin dashboard. So
 <!-- end footer -->
 ```
 
-In the script, we code for an event handler that executes on the button click, then takes the input and stores it in the "Users" Database:
+In the script, we code for an event handler that executes on the button click, then takes the input and stores it in the "Users" Database
 ### Define some globals
 ```javascript
 //these globals are wrapped inside a single function so they remain private to this script when being executed.
@@ -83,8 +83,18 @@ getMarketplaceCustomFields(function(result) {
    }
 });
 ```
+### Authenticating as Admin for the API
+```javascript
+function getCookie(name){
+    var value = '; ' + document.cookie;
+    var parts = value.split('; ' + name + '=');
+    if (parts.length === 2) {
+        return parts.pop().split(';').shift();
+    }
+}
+```
 
-### The event that triggers after click:
+### The event that triggers after click
 ```javascript
 function saveKeys() {  
   //Construct the data object
