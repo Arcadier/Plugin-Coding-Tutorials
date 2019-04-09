@@ -5,7 +5,7 @@ write the page is that if an empty html file is saved in the user/html folder, t
 will not empty.
 Instead it will look like this:
 
-<p align="center"><img src="https://drive.google.com/uc?id=1UBVbRDJPewDOMhBHeQGa3rOUWV2b4nwR"/></p>
+<p align="center"><img src="https://drive.google.com/uc?id=1UBVbRDJPewDOMhBHeQGa3rOUWV2b4nwR" width="860px" height="450px/></p>
 
 What you are looking at right now is the marketplace’s header, footer, and no body in between.
 
