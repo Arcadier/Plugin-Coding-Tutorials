@@ -1,4 +1,8 @@
 # Adding a new page for logged-in buyers #
+## Contents ##
+1. [Adding a page for all logged-in buyers, accessible from all pages](https://github.com/Arcadier/Tutorials/tree/master/Adding%20a%20new%20page%20for%20logged%20in%20buyers#adding-a-page-for-all-logged-in-buyers-accessible-from-all-pages)
+2. [Adding a page accessible for all logged-in buyers, accessible from all pages, on a specific marketplace type](https://github.com/Arcadier/Tutorials/tree/master/Adding%20a%20new%20page%20for%20logged%20in%20buyers#adding-a-page-accessible-for-all-logged-in-buyers-accessible-from-all-pages-on-a-specific-marketplace-type)
+3. [Adding a page accessible for all logged-in buyers, accessible from a specific page, on a specific marketplace type](https://github.com/Arcadier/Tutorials/tree/master/Adding%20a%20new%20page%20for%20logged%20in%20buyers#adding-a-page-accessible-for-all-logged-in-buyers-accessible-from-a-specific-page-on-a-specific-marketplace-type)
 
 Logged in buyers are basically buyers who have an account on the marketplace. This means that mere visitors will not see the page created by this plug in: 
 
