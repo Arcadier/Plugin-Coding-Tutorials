@@ -1,0 +1,41 @@
+table {
+  width: 100%;
+  min-width: 1040px;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: center;
+}
+
+table#t01 tr:nth-child(even) {
+  background-color: #eee;
+}
+
+table#t01 tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+table#t01 th {
+  background-color: black;
+  color: white;
+}
+
+#check {
+  background-color: #4CAF50;
+  /* Green */
+  width: 500px;
+  color: white;
+  padding: 20px 5px;
+  text-align: center;
+  display: inline-block;
+  margin-top: 20px;
+}
