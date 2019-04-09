@@ -87,6 +87,7 @@ else {
 }
 ```
 <p align="center">OR (for a spacetime marketplace)</p>
+
 ```javascript
 if($("#merchantId") && $("#merchantId").length){
   return 0;
@@ -122,4 +123,3 @@ else {
   }
 }
 ```
-
