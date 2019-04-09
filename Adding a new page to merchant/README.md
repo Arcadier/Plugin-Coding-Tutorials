@@ -15,7 +15,9 @@ if($('#merchantId') && $('#merchantId').length){
   //do something
 }
 ```
-* Next, we will create a link and place it somewhere in the general merchant pages. For example, if we want to put it in the “Seller” dropdown menu. The script that creates the link to be out there can be in this form:
+* Next, we will create a link and place it somewhere in the general merchant pages. For example, if we want to put it in the “Seller” dropdown menu. 
+<p align="center"><img src="https://drive.google.com/uc?id=1ch_bxdY8-jx2_O_g8p6jVCvdklMCzosJ"/></p>
+The script that creates the link to be out there can be in this form:
 
 ```javascript
 (function() {
@@ -120,3 +122,9 @@ As can be seen above, the link’s URL points to an html file that was created a
 
 This HTML file is saved in the **user/html** folder.
 The scripts are all saved in the **user/scripts** folder.
+
+After correctly and successfully uploading all the files on the developer dashboard. Clicking the buttons should result in this, meaning all the scripts are working and correctly linked in
+their respective directories:
+
+<p align="center"><img src="https://drive.google.com/uc?id=1Y-Lqp0aSB69ukqjUWiRCnoiz9HreJv1L/></p>
+
