@@ -1,5 +1,10 @@
 Adding pages to the merchant portal
 ===================================
+1. [Adding a page for all merchants, accessible from any page](https://github.com/Arcadier/Tutorials/tree/master/Adding%20a%20new%20page%20to%20merchant#adding-a-page-for-all-merchants-accessible-from-any-page)
+2. [Adding a page for all merchants on a specific type of marketplace (bespoke/spacetime), accessible from any page](https://github.com/Arcadier/Tutorials/tree/master/Adding%20a%20new%20page%20to%20merchant#adding-a-page-for-all-merchants-on-a-specific-type-of-marketplace-bespokespacetime-accessible-from-any-page)
+3. [Adding a page for all merchants on a specific type of marketplace (bespoke/spacetime), accessible from a specific page](https://github.com/Arcadier/Tutorials/tree/master/Adding%20a%20new%20page%20to%20merchant#adding-a-page-for-all-merchants-on-a-specific-type-of-marketplace-bespokespacetime-accessible-from-a-specific-page)
+
+---
 The first step is to create the new page in HTML. One important thing to know before starting to
 write the page is that if an empty html file is saved in the user/html folder, the page, when accessed,
 will not empty.
