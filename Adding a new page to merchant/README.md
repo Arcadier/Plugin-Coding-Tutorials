@@ -15,9 +15,7 @@ if($('#merchantId') && $('#merchantId').length){
   //do something
 }
 ```
-* Next, we will create a link and place it somewhere in the general merchant pages. For example, if we want to put it in the “Seller” dropdown menu. 
-<p align="center"><img src="https://drive.google.com/uc?id=14GPSw5d0epX-ChN0-ObabLVuGZzS_E5l"/></p>
-The script that creates the link to be out there can be in this form:
+* Next, we will create a link and place it somewhere in the general merchant pages. For example, if we want to put it in the “Seller” dropdown menu. The script that creates the link to be out there can be in this form:
 
 ```javascript
 (function() {
