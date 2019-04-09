@@ -1,28 +1,28 @@
-## Selecting on which page and for which user my code executes ##
+### Selecting on which page and for which user my code executes ##
 
-### Admin ###
+#### Admin ####
 ```javascript
 ```
-## Choosing to execute the script only for merchants:
+#### Choosing to execute the script only for merchants:
 ```javascript
 if($('#merchanId') && $('#merchantId').length){ 
   //do something
 }
 ```
 
-### Choosing to execute the script on the `item details page`, no matter who the user:
+#### Choosing to execute the script on the `item details page`, no matter who the user:
 ```javascript
 if($("body").hasClass("item-detail-page")){ 
   //do something
 }
 ```
-### Choosing to execute a script `only for merchants` on the `item-details page`:
+#### Choosing to execute a script `only for merchants` on the `item-details page`:
 ```javascript
 if($('#merchantId') && $('#merchantId').length && $("body").hasClass("item-detail-page")){ 
   //do something
 }
 ```
-### Choosing to execute a script `only for merchants` on the `item-details page` of `Bespoke` marketplaces only:
+#### Choosing to execute a script `only for merchants` on the `item-details page` of `Bespoke` marketplaces only:
 ```javascript
 if($('#merchantId') && $('#merchantId').length && $("body").hasClass("item-detail-page")){ 
   $('input').each(function(){
@@ -32,7 +32,7 @@ if($('#merchantId') && $('#merchantId').length && $("body").hasClass("item-detai
   })
 }
 ```
-### Choosing to execute a script `only for buyers` on `item-details page` of `Bespoke` marketplaces
+#### Choosing to execute a script `only for buyers` on `item-details page` of `Bespoke` marketplaces
 only.
 Merchants and buyers have only 1 thing in common:
 ```html
