@@ -1,4 +1,5 @@
-# Adding pages to the merchant portal #
+Adding pages to the merchant portal
+===================================
 The first step is to create the new page in HTML. One important thing to know before starting to
 write the page is that if an empty html file is saved in the user/html folder, the page, when accessed,
 will not empty.
@@ -126,5 +127,5 @@ The scripts are all saved in the **user/scripts** folder.
 After correctly and successfully uploading all the files on the developer dashboard. Clicking the buttons should result in this, meaning all the scripts are working and correctly linked in
 their respective directories:
 
-<p align="center"><img src="https://drive.google.com/uc?id=1Y-Lqp0aSB69ukqjUWiRCnoiz9HreJv1L/></p>
+<p align="center"><img src="https://drive.google.com/uc?id=1Y-Lqp0aSB69ukqjUWiRCnoiz9HreJv1L"/></p>
 
