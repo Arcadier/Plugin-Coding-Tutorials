@@ -1,0 +1,14 @@
+In this tutorial, we will have the admin input some data that we think is necessary for the plug-in to work properly. This data wll be saved in our databases to be used later in other parts of the marketplace, or any external website. Some real life examples of such data are:
+* Tokens
+* Promo Codes
+* Keys
+* Information not asked by default on Arcadier's onboarding processes like:
+  * Age
+  * Gender
+  * Marital Status
+  * Profession
+
+In the following example, we will create a custom field called “Collect Data”. It will be a text field,
+and the aim is to collect a random number (token) from the admin. We will choose this data to be
+saved in the “Users” database. That will be retrievable by APIs later, at any time – this can be done
+using the Get user info API for example.
