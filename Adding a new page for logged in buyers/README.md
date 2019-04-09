@@ -72,10 +72,35 @@ package and installing it will result in this:
 * The additional restriction we have here we have for this section is making that page
 accessible from a logged-in buyer’s portal only, for bespoke marketplaces. We write that
 restriction in JavaScript using:
-
-<p align="center"><img src="https://drive.google.com/uc?id=13A0dcEAxrkGv5EN8fJIBL-_hs67dtsj6"/></p>
+```javascript
+if($("#merchantId") && $("#merchantId").length){
+  return 0;
+} 
+else {
+  if($("#userId") && $("#userId").length){
+    if('input').each(function(){
+      if($(this).attr('value') == 'bespoke'){
+        //do something
+      }
+    })
+  }
+}
+```
 <p align="center">OR (for a spacetime marketplace)</p>
-<p align="center"><img src="https://drive.google.com/uc?id=1mrY1MHBpvMChjzA_TkRHLO4icqSvwgHi"/></p>
+```javascript
+if($("#merchantId") && $("#merchantId").length){
+  return 0;
+} 
+else {
+  if($("#userId") && $("#userId").length){
+    if('input').each(function(){
+      if($(this).attr('value') == 'spacetime'){
+        //do something
+      }
+    })
+  }
+}
+```
 
 ## Adding a page accessible for all logged-in buyers, accessible from a specific page, on a specific marketplace type ##
 
@@ -83,5 +108,18 @@ restriction in JavaScript using:
 accessible from a logged-in buyer’s portal only, for bespoke marketplaces, on a specific
 page. For example, we want buyers to be able to access the page when they visit the cart
 page of their bespoke marketplace. We write that restriction in JavaScript using:
+```javascript
+if($("#merchantId") && $("#merchantId").length){
+  return 0;
+} 
+else {
+  if($("#userId") && $("#userId").length && $('body').hasClass('page-cart')){
+    if('input').each(function(){
+      if($(this).attr('value') == 'bespoke'){
+        //do something
+      }
+    })
+  }
+}
+```
 
-<p align="center"><img src="https://drive.google.com/uc?id=1UN9tBrgzhQheRKFj7xDUN0PCCk5YqK8L"/></p>
