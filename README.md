@@ -1,7 +1,15 @@
 ### Selecting on which page and for which user my code executes ##
 
 #### Admin ####
+For admins, the task gets really easy. First, the code that’s supposed to run for admins is
+found only in the admin folder of your zip file.
+Secondly, it can be easily detected if an admin is logged on the admin dashboard with this:
 ```javascript
+var pathname = (window.location.pathname + window.location.search).toLowerCase();
+var admin = '/admin';
+if(pathname.indexOf(admin) > -1){ 
+  //do something
+}
 ```
 #### Choosing to execute the script only for merchants:
 ```javascript
