@@ -1,3 +1,4 @@
+![Arcadier](https://theme.zdassets.com/theme_assets/2008942/9566e69f67b1ee67fdfbcd79b1e580bdbbc98874.svg "Arcadier")
 # Adding a new page for logged-in buyers #
 ## Contents ##
 1. [Adding a page for all logged-in buyers, accessible from all pages](https://github.com/Arcadier/Tutorials/tree/master/Adding%20a%20new%20page%20for%20logged%20in%20buyers#adding-a-page-for-all-logged-in-buyers-accessible-from-all-pages)
