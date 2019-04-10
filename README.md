@@ -27,9 +27,9 @@ your business by helping Arcadier’s customers build theirs.
 
 If you are familiar with Arcadier’s custom codes, then you might think why not just use our custom
 codes to implement all that. The reason is that plug-ins are more:
-* Secure – Because they reside in Arcadier’s secure servers instead of client-side
-* Exclusive – Private Apps can require authentication to be used and
-* Powerful as they can change the:
+* **Secure** – Because they reside in Arcadier’s secure servers instead of client-side
+* **Exclusive** – Private Apps can require authentication to be used and
+* **Powerful** as they can change the:
   * Buyer’s interface  
   * Merchant’s interface  
   * Admin’s interface
