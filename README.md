@@ -44,9 +44,9 @@ We have documentation on our:
 * [Front-end](https://api.arcadier.com)
 
 We have Github repositories for:
-* [Plug in demos](/Plug-In-Demos)
-* [Developer Community Support](/Developer-Community-Support)
-* [Tutorials and Guides](/Tutorials)
+* [Plug in demos](https://github.com/Arcadier/Plug-In-Demos)
+* [Developer Community Support](https://github.com/Arcadier/Developer-Community-Support)
+* [Tutorials and Guides](https://github.com/Arcadier/Tutorials)
 
 And finally, to test and play with our system:
 * [Our sandbox marketplaces](https://api.arcadier.com/get-started)
