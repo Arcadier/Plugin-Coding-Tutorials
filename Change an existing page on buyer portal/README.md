@@ -4,7 +4,7 @@ Change existing pages on the buyer portal
 ===
 Adding changes to the buyers' portal is very to do using simple JavaScript and a quick inspection of the HTML tags of the page that you want to change.
 
-For example if you want to add a button to the item details page of a marketplace, simply code as you would normally code an HTML button (but in JS), and place it in the container you want.
+For example if you want to add a button to the item details page of a marketplace, simply code as you would normally code an HTML button (but in JS), and place it in the container you want. More information about choosing the page and user for which you want your code to be used is found [here.](https://github.com/Arcadier/Tutorials/blob/master/Selecting%20on%20which%20page%20and%20for%20which%20user%20my%20code%20executes.md)
 
 ```javascript
 if($('body').hasClass('item-detail-page')){  //if the page is the item detail page
