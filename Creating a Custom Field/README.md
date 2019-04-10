@@ -1,4 +1,6 @@
-In this tutorial, we will have the admin input some data that we think is necessary for the plug-in to work properly. This data wll be saved in our databases to be used later in other parts of the marketplace, or any external website. Some real life examples of such data are:
+![Arcadier](https://theme.zdassets.com/theme_assets/2008942/9566e69f67b1ee67fdfbcd79b1e580bdbbc98874.svg "Arcadier")
+
+In this guide, we will have the admin input some data that we think is necessary for the plug-in to work properly. This data wll be saved in our databases to be used later in other parts of the marketplace, or any external website. Some real life examples of such data are:
 * Tokens
 * Promo Codes
 * Keys
