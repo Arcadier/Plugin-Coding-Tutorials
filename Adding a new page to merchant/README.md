@@ -1,4 +1,5 @@
 ![Arcadier](https://theme.zdassets.com/theme_assets/2008942/9566e69f67b1ee67fdfbcd79b1e580bdbbc98874.svg "Arcadier")
+
 Adding pages to the merchant portal
 ===================================
 1. [Adding a page for all merchants, accessible from any page](https://github.com/Arcadier/Tutorials/tree/master/Adding%20a%20new%20page%20to%20merchant#adding-a-page-for-all-merchants-accessible-from-any-page)
