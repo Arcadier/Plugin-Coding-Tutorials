@@ -1,3 +1,5 @@
+![Arcadier](https://theme.zdassets.com/theme_assets/2008942/9566e69f67b1ee67fdfbcd79b1e580bdbbc98874.svg "Arcadier")
+
 Change existing pages on the buyer portal
 ===
 Adding changes to the buyers' portal is very to do using simple JavaScript and a quick inspection of the HTML tags of the page that you want to change.
