@@ -1,0 +1,1 @@
+This file is written in PHP because it contains sensitive information like the `{client_id}` and the `{client_secret}` of the marketplace. It also has been wrapped as a function so that it can be called as a function from other PHP files.
