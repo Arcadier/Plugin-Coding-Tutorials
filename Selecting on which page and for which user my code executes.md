@@ -1,11 +1,12 @@
 ![Arcadier](https://theme.zdassets.com/theme_assets/2008942/9566e69f67b1ee67fdfbcd79b1e580bdbbc98874.svg "Arcadier")
 ## Selecting on which page and for which user my code executes
 
-1. [Admin](https://github.com/Arcadier/Tutorials#admin)
-2. [Choosing to execute the script only for merchants](https://github.com/Arcadier/Tutorials#choosing-to-execute-the-script-only-for-merchants)
-3. [Choosing to execute the script on the item details page, no matter who the user](https://github.com/Arcadier/Tutorials#choosing-to-execute-the-script-on-the-item-details-page-no-matter-who-the-user)
-4. [Choosing to execute a script only for merchants on the item-details page of Bespoke marketplaces only](https://github.com/Arcadier/Tutorials#choosing-to-execute-a-script-only-for-merchants-on-the-item-details-page-of-bespoke-marketplaces-only)
-5. [Choosing to execute a script only for buyers on item-details page of Bespoke marketplaces only](https://github.com/Arcadier/Tutorials#choosing-to-execute-a-script-only-for-buyers-on-item-details-page-of-bespoke-marketplaces-only)
+1. [Admin](https://github.com/Arcadier/Tutorials/blob/master/Selecting%20on%20which%20page%20and%20for%20which%20user%20my%20code%20executes.md#admin)
+2. [Choosing to execute the script only for merchants](https://github.com/Arcadier/Tutorials/blob/master/Selecting%20on%20which%20page%20and%20for%20which%20user%20my%20code%20executes.md#choosing-to-execute-the-script-only-for-merchants)
+3. [Choosing to execute the script on the item details page, no matter who the user](https://github.com/Arcadier/Tutorials/blob/master/Selecting%20on%20which%20page%20and%20for%20which%20user%20my%20code%20executes.md#choosing-to-execute-the-script-on-the-item-details-page-no-matter-who-the-user)
+4. [Choosing to execute a script only for merchants on the item-details page](https://github.com/Arcadier/Tutorials/blob/master/Selecting%20on%20which%20page%20and%20for%20which%20user%20my%20code%20executes.md#choosing-to-execute-a-script-only-for-merchants-on-the-item-details-page)
+5. [Choosing to execute a script only for merchants on the item-details page of Bespoke marketplaces only](https://github.com/Arcadier/Tutorials/blob/master/Selecting%20on%20which%20page%20and%20for%20which%20user%20my%20code%20executes.md#choosing-to-execute-a-script-only-for-merchants-on-the-item-details-page-of-bespoke-marketplaces-only)
+6. [Choosing to execute a script only for buyers on item-details page of Bespoke marketplaces only](https://github.com/Arcadier/Tutorials/blob/master/Selecting%20on%20which%20page%20and%20for%20which%20user%20my%20code%20executes.md#choosing-to-execute-a-script-only-for-buyers-on-item-details-page-of-bespoke-marketplaces-only)
 
 ---
 #### Admin ####
