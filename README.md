@@ -2,34 +2,54 @@
 
 Plug-Ins
 ===============
-The purpose of plug-ins is to add very specific features to our core product, which are not needed by every marketplace owner, but still valuable to some of them. Hence, we allow those who need them to install/uninstall those features as plug-ins.
+### What are plug-ins?
 
-These customers sometimes approach developers to help them build these plug ins. So, on top of our [**API documentation**](apiv2.arcadier.com), and [**Plug-In Documentation**](#), this repository provides examples of how everything is brought together to create a fully functional plug-in. These plug-ins only work on Arcadier's marketplaces which are on [**Scale**](https://www.arcadier.com/packages.html), or [**Enterprise**](https://www.arcadier.com/enterprise.html) plans. 
+Plug-ins work just like how apps work on your iPhone or Android. They serve a very specific purpose:
+to increase the functionality of your phone beyond what they were intended to do. For Arcadier’s
+marketplaces, plug-ins do the same thing: marketplace owners install them to satisfy a specific
+business need on top of Arcadier’s core product, for example:
+* A real-time shipping cost estimator for inter-continental shipping routes
+* A plug in that allows you to sell on your Instagram page in one click
+* A plug in from another organization that allow integration of their product to ours, e.g.
+Mailchimp and Arcadier
+* A plug-in that changes the onboarding flow of merchants on a marketplace, tailored by the
+requirements of its admin.
 
-This repository contains recipes' examples. Those recipes aim at showing basic concepts behind creating plug-ins. I.e, most commonly coded functions like
-* Creating new pages for Admin/Merchant/Buyer/All
-  * Using HTML only
-  * Using JS only
-  * Using both HTML and JS
-* Adding changes to existing pages for Admin/Merchant/Buyer/All
-  * Using JS and relevant libraries (jQuery), combined with APIs
-* How to store/retrieve data on Arcadier's Database
-  * Using JS and Custom fields on the [**Developer Dashboard**](#)
-* How to use our API's the most efficiently
-  * Using JS and common code snippets like:
+Plug-ins meet very specific needs for each marketplace and their owners are ready to pay for them if
+it improves their business. A marketplace operator might want a super specific plug-in to be
+available to him/her only – that plug-in would be a private one.
 
-```javascript
-//This function is used in almost all API calls when Authenticating. It returns the Authorisation token.                             
-function getCookie(name){
-    var value = '; ' + document.cookie;
-    var parts = value.split('; ' + name + '=');
-    if (parts.length === 2) {
-        return parts.pop().split(';').shift();
-    }
-}
-```
-* Combining those basic concepts make whole plug-ins, and are reflected in Honestbee's and Mailchimp's examples.
-***
+On the other hand, many marketplaces could be facing the same problem, so as an entrepreneurial
+developer, you could create one which is available for everyone to buy – a regular plug-in.
+This is where you, as a developer, come in with your technical expertise and provide those
+marketplaces with the plug-ins marketplace owners demand. Create plug-ins, get paid, and build
+your business by helping Arcadier’s customers build theirs.
+
+If you are familiar with Arcadier’s custom codes, then you might think why not just use our custom
+codes to implement all that. The reason is that plug-ins are more:
+* Secure – Because they reside in Arcadier’s secure servers instead of client-side
+* Exclusive – Private Apps can require authentication to be used and
+* Powerful as they can change the:
+  * Buyer’s interface  
+  * Merchant’s interface  
+  * Admin’s interface
+  * Add totally new Pages to the marketplace
+  * Change user flows
+  
+If you are not familiar with Arcadier’s system or creation of plug-in, then you have come to the right
+place to learn all you need to become a plug-in developer.
+We have documentation on our:
+* [API v2.0](https://apiv2.arcadier.com)
+* [Plug-Ins](#)
+* [Front-end](https://api.arcadier.com)
+
+We have Github repositories for:
+* [Plug in demos](/Plug-In-Demos)
+* [Developer Community Support](/Developer-Community-Support)
+* [Tutorials and Guides](/Tutorials)
+
+And finally, to test and play with our system:
+* [Our sandbox marketplaces](https://api.arcadier.com/get-started)
 
 Languages
 ---------
@@ -43,20 +63,5 @@ Our server-side language is in PHP.
 
 File Structure
 --------------
-As explained in our [**Plug-in documentation**](#), the file structure of each Plug-in's source code is very specific and is reflected in this repository. For example, the honestbee plug in has `honestbee` as root, with 2 subfolders `admin` and `user`. 
-
-`admin` contains the part of the code that executes for the marketplace administrator. `user` has the code that executes for the merchants and buyers.
-
+`image`
 ***
-
-How to install them as plug in
-------------------------------
-1. Download the repository as .zip
-2. Extract everything
-3. Choose the plug-in you want to install
-   * Honestbee,
-   * Stripe, or
-   * Mailchimp
-4. Compress the `admin` and `user` folders together into a single root folder.
-5. Upload the .zip folder on your [**Developer Dashboard**](#)
-
