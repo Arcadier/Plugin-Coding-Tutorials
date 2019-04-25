@@ -1,3 +1,6 @@
+/*This snippet shows how you could create a a new custom field to be stored in the Implementations Reference table, 
+and straight away store values in it (line 55)*/
+
 var token;
 var marketplaceID;
 var baseURL = window.location.hostname;
