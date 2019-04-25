@@ -86,9 +86,9 @@ getUserInfo(null, function(userInfo) {
                     //next merchant with the custom field
                     executed = false;
                     maxspan = span;
-                    break;
+                    break; //break from the role searching loop, because merchant role has been found and that merchant has no more of the custom field we're looking for
                 } else {
-                    console.log("merchant doesnt have the custom field. Next merchant.");
+                    console.log("Merchant doesn't have the custom field. Next merchant.");
                 }
             }
         }
