@@ -35,7 +35,7 @@ function getUserInfo(id, callback) {
     $.ajax(settings6).done(function(admin_token) {
         token = "Bearer " + JSON.stringify(admin_token.access_token).replace(/"/g, '');
          adminID = admin_token.UserId;
-         var url = "/api/v2/admins/" + adminID + "/users";  //API to get all users' info
+         var url = "api/v2/admins/" + adminID + "/users/?role=merchant";  //API to get all users' info
         $.ajax({
             url: url,
             method: 'GET',
@@ -53,44 +53,39 @@ function getUserInfo(id, callback) {
 }
 
 getUserInfo(null, function(userInfo) {
-    if (userInfo != undefined) {
-        for (var i = 0; i < userInfo.length; i++) { //loop through users
-            for (var j = 0; j < 4; j++) { //because there are only 4 roles a user can have
-                if (userInfo[i].Roles[j] === "Merchant") { //select merchants from all users
-
-                    lastname = userInfo[i].LastName;
-                    firstname = userInfo[i].FirstName;
-
-                    $.each(userInfo[i].CustomFields, function(index, cf) { //loop through merchants' custom fields
-                        if (cf.Code.startsWith("Custom Field Name")) { //if they have the custom field name
-                            if (executed == false) {
-                                var table = document.getElementById('table');
-                                var tr = document.createElement("tr");
-                                tr.id = i;
-                                tr.innerHTML = "" + firstname + " " + lastname + "";
-                                table.appendChild(tr);
-                                executed = true;
-                                console.log("create row for: ", firstname);
-                            }
-                            value = cf.Values[0];
-                            var td = document.createElement("td");
-                            td.innerHTML = "\n" + value + "";
-                            document.getElementById(i).appendChild(td);
-                            span++;
-                            if (span > maxspan) {
-                                maxspan = span;
-                                document.getElementById("custom-field-column").setAttribute("colspan", maxspan);
-                            }
-                        }
-                    });
-                    //next merchant with the custom field
-                    executed = false;
-                    maxspan = span;
-                    break; //break from the role searching loop, because merchant role has been found and that merchant has no more of the custom field we're looking for
-                } else {
-                    console.log("Merchant doesn't have the custom field. Next merchant.");
-                }
-            }
+  if (userInfo != undefined) {
+    for (var i = 0; i < userInfo.length; i++) { //loop through users
+      $.each(userInfo[i].CustomFields, function(index, cf) { //loop through merchants' custom fields
+        if (cf.Code.startsWith("Custom Field Name")) { //if they have the custom field name
+          lastname = userInfo[i].LastName;
+          firstname = userInfo[i].FirstName;
+          
+          if (executed == false) {
+            var table = document.getElementById('table');
+            var tr = document.createElement("tr");
+            tr.id = i;
+            tr.innerHTML = "" + firstname + " " + lastname + "";
+            table.appendChild(tr);
+            executed = true;
+            console.log("create row for: ", firstname);
+          }
+          
+          value = cf.Values[0];
+          var td = document.createElement("td");
+          td.innerHTML = "\n" + value + "";
+          document.getElementById(i).appendChild(td);
+          span++;
+          if (span > maxspan) {
+            maxspan = span;
+            document.getElementById("custom-field-column").setAttribute("colspan", maxspan);
+          }
         }
-    }
+      });
+      //next merchant with the custom field
+      executed = false;
+      maxspan = span;
+      break; //break from the role searching loop, because merchant role has been found and that merchant has no more of the custom field we're looking for
+    } 
+  }
 });
+
