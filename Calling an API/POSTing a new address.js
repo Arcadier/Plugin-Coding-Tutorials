@@ -10,8 +10,9 @@ function getCookie(name){
     }
 }
 
-var userID = document.getElementbyID("userGuid").value; //get the userID
+var userID = document.getElementByID("userGuid").value; //get the userID
 var token = getCookie('webapitoken'); //get the auth token
+var baseURL = window.location.hostname; //get the marketplace URL
 
 var data = {
       "Name": "My old address",
@@ -28,7 +29,7 @@ var data = {
 };
 
 var settings = {
-  "url": "https://{{your-marketplace}}.arcadier.io/api/v2/users/" + userID,
+  "url": "https://"+ baseURL +"/api/v2/users/" + userID,
   "method": "POST",
   "headers": {
     "Content-Type": "application/json",
