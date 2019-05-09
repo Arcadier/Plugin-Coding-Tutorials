@@ -2,7 +2,7 @@ var baseURL = window.location.hostname;
 var token;
 
 //this token API isn't recommended to be used in JavaScript because it exposes the client ID and secret
-var settings3 = {
+var settings = {
     "url": "https://" + baseURL + "/token",
     "method": "POST",
     "headers": {
@@ -15,7 +15,7 @@ var settings3 = {
         "scope": "admin"
     }
 };
-$.ajax(settings3).done(function(admin_token) {
+$.ajax(settings).done(function(admin_token) {
     token = "Bearer " + JSON.stringify(admin_token.access_token).replace(/"/g, '');
     adminID = admin_token.UserId;
 
@@ -42,7 +42,7 @@ $.ajax(settings3).done(function(admin_token) {
         "data": JSON.stringify(user_data)
     };
     $.ajax(settings2).done(function(response) {
-        creation_response = response;
+        var creation_response = response;
         var userID = //userID of the user you want this value to be stored for
 
         //CReate JSON body for Update User Info API
@@ -54,7 +54,7 @@ $.ajax(settings3).done(function(admin_token) {
             }]
         };
         //call the Update User Information API
-        var settings = {
+        var settings3 = {
             "url": "https://" + baseURL + "/api/v2/users/" + userID + "/",
             "method": "PUT",
             "headers": {
@@ -63,7 +63,7 @@ $.ajax(settings3).done(function(admin_token) {
             },
             "data": JSON.stringify(data),
         };
-        $.ajax(settings).done(function(result) {
+        $.ajax(settings3).done(function(result) {
             toastr.success("Success", "Great"); //the user now has a custom field with a value (line 54) stored in it
         })
     })
