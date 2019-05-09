@@ -41,4 +41,3 @@ var settings = {
   console.log(response);
   console.log("POST successful");
 });
-      
