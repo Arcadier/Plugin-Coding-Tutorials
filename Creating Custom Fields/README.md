@@ -17,3 +17,5 @@ The same logic applies for items.
 It's for API's to know when its relevant to fetch data from a CF. If the CF is in a particular table, for example, in Users table, then if you call the [Get User Info](https://apiv2.arcadier.com/#129fa6b1-1c39-4a41-b7b8-8aa7f2545394) API, it will automtatically query the Users' database and find if that user has any CF associated with them. 
 
 If you call the [Get Marketplace Info](https://apiv2.arcadier.com/#928eac76-5bee-4bf3-9484-293551f95cde) API, it will fetch data from CF's that are associated with the marketplace only and ignore CFs of User's.
+
+It just makes the life of those API's easier. Who doesn't like happy, fast responding API's?
