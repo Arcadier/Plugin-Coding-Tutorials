@@ -1,11 +1,11 @@
-Custom Fields(CF) are what we give to developers to store information in our databases. There's 2 ways of creatinf custom fields:
-* Through the admin portal
+Custom Fields(CF) are what we give to developers to store information in our databases. There's 2 ways of creating custom fields:
+* Through the admin portal.
  * Created by the admin. Very easy. Retrievable via API. Front-end = taken care of. **BUT** only available for merchants to fill up during an item upload.
  * Created on the developer dashboard. Also very easy. Retrievable via API. Front-end for input and/or display = you need to do it. **BUT** you can literally do anything you want with it.
  
 During the process of creating a CF, you will have to choose in which database it will belong. For example:
 
-If you want that CF to store information about the marketplace and retrievable by any user (who's smart enough), the you choose it's ReferenceTable to be "Implementations".
+If you want that CF to store information about the marketplace and retrievable by any user (who's smart enough), then you choose it's ReferenceTable to be "Implementations".
 
 If you want a CF to be storing information for a specific user, then you choose the ReferenceTable to be "Users".
 
