@@ -19,3 +19,99 @@ It's for API's to know when its relevant to fetch data from a CF. If the CF is i
 If you call the [Get Marketplace Info](https://apiv2.arcadier.com/#928eac76-5bee-4bf3-9484-293551f95cde) API, it will fetch data from CF's that are associated with the marketplace only and ignore CFs of User's.
 
 It just makes the life of those API's easier. Who doesn't like happy, fast responding API's?
+
+# How to create Custom fields
+> "That's honestly the easiest thing I've learnt when I joined Arcadier" ~ Tanoo, Pre-Sales Engineer at Arcadier
+
+If he can learn that then you definitely can. We have an API to create custom fields: [Create Custom Field](https://apiv2.arcadier.com/#27cc6867-d272-4dfb-9891-82216a63c409).
+
+This is the body the API accepts
+```JSON
+{
+  "Name": "string",
+  "DataInputType": "string",
+  "DataRegex": "string",
+  "MinValue": 0,
+  "MaxValue": 0,
+  "ReferenceTable": "string",
+  "DataFieldType": "string",
+  "IsSearchable": true,
+  "IsSensitive": true,
+  "Active": true,
+  "CreatedDateTime": "2019-03-29T07:24:03.051Z",
+  "Options": [
+    {
+      "Name": "string"
+    }
+  ]
+}
+```
+The `Code` is automatically generated and will always have what you give as `Name` as prefix. For example, if you give `"Name": "banana"`, after a successful API call, the `Code` will be automatically generated as `"banana-randomnesslevel99"`.
+
+`"DataInputType"` can hold several values:
+* `textfield`
+* `checkbox`
+* `dropdown`
+* `number`
+
+`"DataRegex"` will hold the Regex requirements for the Value that will be stored in them.
+
+`"MinValue"` and `"MaxValue"` are the minimum and maximum value a number can have if `number` is chosen as `"DataInputType"`.
+
+`"ReferenceTable"` for now can hold `"Implementations"`, `"Users"` and `"Items"`.
+* Implementations will make the custom field retrivable by Marketplace API's.
+* Users will make it retrievable by Accounts API's.
+* Items will make it retrievable by Accounts API's.
+
+`"DataFieldType"` is either `"string"`, or `"integer"`.
+
+```json
+"Options": [
+    {
+      "Name": "string"
+    }
+  ]
+```
+This is only relevant for dropdown and checkbox where you would have to specify options.
+
+Knowing this, create an object 
+```javascript
+var object = { 
+  "Name": "string",
+  "DataInputType": "string",
+  "DataRegex": "string",
+  "MinValue": 0,
+  "MaxValue": 0,
+  "ReferenceTable": "string",
+  "DataFieldType": "string",
+  "IsSearchable": true,
+  "IsSensitive": true,
+  "Active": true,
+  "CreatedDateTime": "2019-03-29T07:24:03.051Z",
+  "Options": [
+    {
+      "Name": "string"
+    }
+  ]
+};
+```
+Stringify it with ```javascript var data = JSON.stringify(object)```
+
+Have the admin token, adminID and marketplace URL ready. Prepare the headers:
+```javascript
+var headers = {
+        "url": "https://" + baseURL + "/api/v2/admins/" + adminID + "/custom-field-definitions",
+        "method": "POST",
+        "headers": {
+            "Content-Type": "application/json",
+            "Authorization": token
+        },
+        "data": JSON.stringify(user_data)
+    };
+```
+Let Ajax do the magic:
+```javascript
+$.ajax(headers).done(function(response) {
+   console.log(response);
+});
+```
