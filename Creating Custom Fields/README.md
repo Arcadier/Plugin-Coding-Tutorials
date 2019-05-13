@@ -105,7 +105,7 @@ var headers = {
         "method": "POST",
         "headers": {
             "Content-Type": "application/json",
-            "Authorization": token
+            "Authorization": "Bearer " + token
         },
         "data": JSON.stringify(user_data)
     };
@@ -117,3 +117,44 @@ $.ajax(headers).done(function(response) {
 });
 ```
 Your Custom Field has been created and you may proceed to fill it up with data using our `Update` APIs.
+
+# How to store data in the custom fields
+We do that using API's.
+If you chose the ReferenceTable of the custom field to be `"Implementations"`, then your custom field will be affected by **Marketplace API's**.
+
+After creating the custom field, you will receive the custom field's `Code` in the response: `response.Code`.
+
+Call  the [Get marketplace Information API](https://apiv2.arcadier.com/view/6410759/S17oxV7m/?version=latest#928eac76-5bee-4bf3-9484-293551f95cde). Store the `response.ID` in a variable - this is the marketplace's ID.
+
+Call the [Update Marketplace Information API](https://apiv2.arcadier.com/view/6410759/S17oxV7m/?version=latest#73471ada-ab82-42f3-bad4-af79f5e1714b).
+
+```javascript
+var data = {
+    "ID": marketplaceID,
+    "CustomFields": [
+        {
+            "Code": response.code,
+            "Values": [
+                "I want to save this" //if the custom field was set to be a textfield
+            ]
+        }
+    ]
+};
+```
+
+Call the API:
+```javascript
+var settings = {
+  "url": "https://" + baseURL + "/api/v2/marketplaces",
+  "method": "POST",
+  "headers": {
+    "Content-Type": "application/json",
+    "Authorization": "Bearer" + token
+  },
+  "data": JSON.stringify(data)
+};
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
+```
