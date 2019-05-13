@@ -158,3 +158,36 @@ $.ajax(settings).done(function (response) {
   console.log(response);
 });
 ```
+If you chose the ReferenceTable of the custom field to be `"Users"`, then your custom field will be affected by **User API's**.
+
+After creating the custom field, you will receive the custom field's `Code` in the response: `response.Code`. 
+
+Call the [Update User Info API](https://apiv2.arcadier.com/view/6410759/S17oxV7m/?version=latest#cac4e985-84f9-48fd-bd76-0cbc1850fc66) and have the `userID` ready. Then preprare the data and call the API to save it for that `userID`.
+
+```javascript
+var data = {
+    "ID": userID,
+    "CustomFields": [
+        {
+            "Code": response.code,
+            "Values": [
+                "I want to save this" //if the custom field was set to be a textfield
+            ]
+        }
+    ]
+};
+
+var settings = {
+  "url": "https://" + baseURL + "/api/v2/users/" + userID,
+  "method": "PUT",
+  "headers": {
+    "Content-Type": "application/json",
+    "Authorization": "Bearer" + token
+  },
+  "data": JSON.stringify(data) ,
+};
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
+```
