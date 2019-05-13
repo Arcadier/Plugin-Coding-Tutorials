@@ -95,7 +95,7 @@ var object = {
   ]
 };
 ```
-Stringify it with ```javascript var data = JSON.stringify(object)```
+Stringify it with `var data = JSON.stringify(object)`
 
 Have the admin token, adminID and marketplace URL ready. Prepare the headers:
 ```javascript
