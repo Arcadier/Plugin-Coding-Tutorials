@@ -1,3 +1,5 @@
+# What are custom fields?
+
 Custom Fields(CF) are what we give to developers to store information in our databases. There's 2 ways of creating custom fields:
 * Through the admin portal.
  * Created by the admin on admin dashboard. Very easy. Retrievable via API. Front-end = taken care of. **BUT** only available for merchants to fill up during an item upload, and gets displayed on the item details page.
