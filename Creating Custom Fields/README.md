@@ -1,7 +1,8 @@
 Custom Fields(CF) are what we give to developers to store information in our databases. There's 2 ways of creating custom fields:
 * Through the admin portal.
- * Created by the admin. Very easy. Retrievable via API. Front-end = taken care of. **BUT** only available for merchants to fill up during an item upload.
+ * Created by the admin on admin dashboard. Very easy. Retrievable via API. Front-end = taken care of. **BUT** only available for merchants to fill up during an item upload, and gets displayed on the item details page.
  * Created on the developer dashboard. Also very easy. Retrievable via API. Front-end for input and/or display = you need to do it. **BUT** you can literally do anything you want with it.
+ * Created via API. There's an API to create the custom fields with a great level of detail (explained below).
  
 During the process of creating a CF, you will have to choose in which database it will belong. For example:
 
@@ -115,3 +116,4 @@ $.ajax(headers).done(function(response) {
    console.log(response);
 });
 ```
+Your Custom Field has been created and you may proceed to fill it up with data using our `Update` APIs.
