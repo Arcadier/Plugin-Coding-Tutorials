@@ -64,7 +64,7 @@ The `Code` is automatically generated and will always have what you give as `Nam
 `"ReferenceTable"` for now can hold `"Implementations"`, `"Users"` and `"Items"`.
 * Implementations will make the custom field retrivable by Marketplace API's.
 * Users will make it retrievable by Accounts API's.
-* Items will make it retrievable by Accounts API's.
+* Items will make it retrievable by Items API's.
 
 `"DataFieldType"` is either `"string"`, or `"integer"`.
 
