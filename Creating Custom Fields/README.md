@@ -8,7 +8,7 @@ Custom Fields(CF) are what we give to developers to store information in our dat
  
 During the process of creating a CF, you will have to choose in which database it will belong. For example:
 
-If you want that CF to store information about the marketplace and retrievable by any user (who's smart enough), then you choose it's ReferenceTable to be "Implementations".
+If you want that CF to store information about the marketplace and retrievable by any user, then you choose it's ReferenceTable to be "Implementations".
 
 If you want a CF to be storing information for a specific user, then you choose the ReferenceTable to be "Users".
 
