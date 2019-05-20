@@ -22,7 +22,7 @@ if(pathname.indexOf(admin) > -1){
 ```
 #### Choosing to execute the script only for `merchants`:
 ```javascript
-if($('#merchanId') && $('#merchantId').length){ 
+if($('#merchantId') && $('#merchantId').length){ 
   //do something
 }
 ```
