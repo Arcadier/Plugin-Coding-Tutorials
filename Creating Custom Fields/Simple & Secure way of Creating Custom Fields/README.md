@@ -35,7 +35,7 @@ Another reason you might want to use this method is while writing scripts that w
 1. Download the `makecutomfields.php` and `CallAPI.php` files and place them in your `admin` or `user` directory.
 
 <p align="center">
-  <img src="https://github.com/Arcadier/Tutorials/blob/master/Simpler%20way%20of%20making%20Custom%20Fields/images/directoryForPhp.JPG"/>
+  <img src="https://github.com/Arcadier/Tutorials/blob/master/Creating%20Custom%20Fields/Simple%20%26%20Secure%20way%20of%20Creating%20Custom%20Fields/images/directoryForPhp.JPG"/>
  </p>
 
 
