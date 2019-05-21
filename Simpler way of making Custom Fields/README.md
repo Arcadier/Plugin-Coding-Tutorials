@@ -2,7 +2,7 @@
 
 ## What are Custom Fields?
 
-Custom Fields(CF) are what we give to developers to store information in our databases. There are any ways pf creating a Custom Field:
+Custom Fields(CF) are what we give to developers to store information in our databases. There are any ways of creating a Custom Field:
 
 * Through the Admin portal
 
@@ -19,27 +19,27 @@ Custom Fields(CF) are what we give to developers to store information in our dat
   * There's an API to create the custom fields with a great level of detail. Find detailed documentation on this [here](https://github.com/Arcadier/Tutorials/tree/master/Creating%20Custom%20Fields)
 
 
-* Created using a much simpler method, descried in detail below.
+* Created using a much simpler method, described in detail below.
 
 ## But Why?
 
 You might ask why this method is even used. The simplest answer is, it's so much easier.
 
-Creating a custom field is a 2 step process, whearin you fist call an API to make a custom field, and then you call another API to edit it. This function lets you do that in 1 step. <br/>
-All you need to do is copy-paste the javascript function given below and add the makecustomfields.php and CallAPI.php files at the appropriate location, and then its as simple as calling a function to make and edit Custom Fields.
+Creating a custom field is a 2 step process: 1) call the API to create it. 2) Call another API to edit it. This function lets you do that in 1 step. <br/>
+All you need to do is copy & paste the javascript function given below in *your* script and add the `makecustomfields.php` and `CallAPI.php` in the same directory as your `html`, `css` and `scripts` folders. More information about this [here]().
 
-Another reason you might want to use this method is while writing scripts that would run for the Users. Since this script can be seen by the Users, you cannot deal with Authorization Tokens and Admin IDs here. It will be much more secure to let a PHP file residing in the server handle all the API calls.
+Another reason you might want to use this method is while writing scripts that would run for Users. Since this script handles client ID's, client secrets and administrator tokens, you do not want it to be handled on client side. TLDR: it's not secure. It is more secure to let a PHP file residing in the server handle all the API calls and authentication.
 
 ## What you need to do?
 
-1. Download the makecutomfields.php and CallAPI.php files and place them in the directory which has the **scipts folder**, which containts the javascript file that is calling the php files.
+1. Download the `makecutomfields.php` and `CallAPI.php` files and place them in your `admin` or `user` directory.
 
 <p align="center">
   <img src="https://github.com/Arcadier/Tutorials/blob/master/Simpler%20way%20of%20making%20Custom%20Fields/images/directoryForPhp.JPG"/>
  </p>
 
 
-2. Copy paste the following function into the script you want to use it in.
+2. Copy & paste the following function into the script you want to use.
 
   ```javascript
   function makeCustomField(name,table,exists,code,id,value){
@@ -123,7 +123,7 @@ var id = "d7996ffd-3244-431d-852a-55e1a9c7e3cc";
 var value = "My first custom field";
 
 var response = makeCustomField(name,table,exists,code,id,value);
-console.log(respnse);
+console.log(response);
 ```
 
 Console will print the following value:
@@ -135,7 +135,7 @@ Console will print the following value:
 }
 ```
 
-If you look at the user info of the user with userID *d7996ffd-3244-431d-852a-55e1a9c7e3cc*, you will see the following:
+If you look at the user info of the user with userID `d7996ffd-3244-431d-852a-55e1a9c7e3cc`, you will see the following:
 ```javascript
 {
     "ID": "d7996ffd-3244-431d-852a-55e1a9c7e3cc",
@@ -195,7 +195,7 @@ Console will print the following value:
 }
 ```
 
-If you look at the user info of the user with userID d7996ffd-3244-431d-852a-55e1a9c7e3cc, you will see the following:
+If you look at the user info of the user with userID `d7996ffd-3244-431d-852a-55e1a9c7e3cc`, you will see the following:
 
 ```javascript
 {
