@@ -2,7 +2,7 @@
 
 ## What are Custom Fields?
 
-Custom Fields(CF) are what we give to developers to store information in our databases. There are any ways of creating a Custom Field:
+Custom Fields(CF) are what we give to developers to store information in our databases. There are many ways of creating a Custom Field:
 
 * Through the Admin portal
 
@@ -42,6 +42,10 @@ Another reason you might want to use this method is while writing scripts that w
 2. Copy & paste the following function into the script you want to use.
 
   ```javascript
+  var scriptSrc = document.currentScript.src;
+  var index = scriptSrc.search(/\/scripts\//);
+  var packagePath = scriptSrc.slice(0,index).trim();
+  
   function makeCustomField(name,table,exists,code,id,value){
 
     var FinalResult;
@@ -59,7 +63,8 @@ Another reason you might want to use this method is while writing scripts that w
     }
 
     /*Using ajax to send the data to PHP file.
-    Synchronous ajax (async:false) is used here the function needs to assign result to FinalResults before it returns FinalResult.*/
+    Synchronous ajax (async:false) is used here because the function needs
+    to assign result to FinalResults before it returns FinalResult.*/
 
     $.ajax({
         url: url,
@@ -69,7 +74,9 @@ Another reason you might want to use this method is while writing scripts that w
         async:false,
         success: function(result) {
             toastr.success('Task successfully completed', 'Great');
-            FinalResult = JSON.parse(result); //PHP returns a json encoded string. Parse the string into a JSON object and assign it to Final Result.
+            /*PHP returns a json encoded string.
+            Parse the string into a JSON object and assign it to Final Result.*/
+            FinalResult = JSON.parse(result); 
         },
         error: function(error){
           toastr.error('Something went wrong','Error');
@@ -91,16 +98,16 @@ This function can (depending on the parameters passed):
 
 |Parameter|Type|Use|
 |:---:|:---:|:---:|
+|exists|*boolean*|This is a boolean parameter. It takes in a true/false which tells the program if the Custom Field already exists. The program will use this parameter to decide whether to update an existing Custom Field or make a new one.|
 |name|*string*|This parameter takes in the name of the Custom Field. This text will be used at the start of the Custom Field Code|
-|table|*string*|This parameter takes in the name of the table in which you want to save the Custom Field.|
-|exists|*boolean*|This is a boolean parameter. It takes in a true/false which tells the program if the Custom Field already exists. The program will use this parameter to decide whether to update an existing Custom Field or to make a new one.|
+|table|*string*|This parameter takes in the name of the table in which you want to store the Custom Field.|
 |code|*string*|This parameter is only supposed to be passed when the *exists* parameter is true. It takes the unique code of the Custom field that you want to edit. If exists is false, this parameter should be null.|
 |id|*string*|This parameter takes in the user ID if the table passed is "Users". Otherwise it should remain null.|
-|value|*string*|This parameter takes in the value that is to be put inside the custom field. If the custom field already exists, the program will use the Custom field code to edit the Custom Field and place this new value. If custom field does not exist, the program will create a new Custom Field and place this value inside it.|
+|value|*string*|This parameter takes in the value to be stored in the custom field. If the custom field already exists, the program will  edit the Custom Field with this new value. If custom field does not exist, the program will create a new Custom Field and place this value.|
 
 ### Return Value
 
-This function returns an object that has the information about the newly-created/recently-edited custom field. The returned object structure is given below
+The returned object structure is given below
 
 ```javascript
 {
@@ -135,7 +142,7 @@ Console will print the following value:
 }
 ```
 
-If you look at the user info of the user with userID `d7996ffd-3244-431d-852a-55e1a9c7e3cc`, you will see the following:
+If you use the [get user info](https://apiv2.arcadier.com/view/6410759/S17oxV7m/?version=latest#129fa6b1-1c39-4a41-b7b8-8aa7f2545394) API with user ID `d7996ffd-3244-431d-852a-55e1a9c7e3cc`, you will see the following:
 ```javascript
 {
     "ID": "d7996ffd-3244-431d-852a-55e1a9c7e3cc",
@@ -159,7 +166,7 @@ If you look at the user info of the user with userID `d7996ffd-3244-431d-852a-55
             "Code": "test-3guwCAnR5L",
             "Name": "test",
             "Values": [
-                "My first custom field"
+                "My first custom field" //New Custom Field created by the function
             ]
         }
     ],
@@ -195,7 +202,7 @@ Console will print the following value:
 }
 ```
 
-If you look at the user info of the user with userID `d7996ffd-3244-431d-852a-55e1a9c7e3cc`, you will see the following:
+If you use the [get user information](https://apiv2.arcadier.com/view/6410759/S17oxV7m/?version=latest#129fa6b1-1c39-4a41-b7b8-8aa7f2545394) API with user ID `d7996ffd-3244-431d-852a-55e1a9c7e3cc`, you will see the following:
 
 ```javascript
 {
@@ -220,7 +227,7 @@ If you look at the user info of the user with userID `d7996ffd-3244-431d-852a-55
             "Code": "test-3guwCAnR5L",
             "Name": "test",
             "Values": [
-                "My first custom field edit!!"
+                "My first custom field edit!!" //Custom Field edited by the function
             ]
         }
     ],
@@ -256,7 +263,7 @@ Console will print the following value:
 }
 ```
 
-If you look at the marketplace info, you will see the following:
+If you use the [get marketplace information](https://apiv2.arcadier.com/view/6410759/S17oxV7m/?version=latest#928eac76-5bee-4bf3-9484-293551f95cde) API, you will see the following:
 
 ```javascript
 {
@@ -288,7 +295,7 @@ If you look at the marketplace info, you will see the following:
             "Code": "test-JV5UpgWcBL",
             "Name": "test",
             "Values": [
-                "My first custom field"
+                "My first custom field" //New Custom field created by function.
             ]
         }
     ]
