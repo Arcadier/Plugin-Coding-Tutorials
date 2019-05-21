@@ -1,4 +1,4 @@
-# Simpler Way of Making Custom Fields
+# Secure and Simple Way of Creating Custom Fields
 
 ## What are Custom Fields?
 
@@ -183,7 +183,7 @@ If you use the [get user info](https://apiv2.arcadier.com/view/6410759/S17oxV7m/
 ```javascript
 var name = "test";
 var table = "Users";
-var exists = true;
+var exists = true; //exists is true; program will edit an existing custom field
 var code = response["Code"];
 var id = "d7996ffd-3244-431d-852a-55e1a9c7e3cc";
 var value = "My first custom field edit!!";
