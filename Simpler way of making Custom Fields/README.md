@@ -34,7 +34,8 @@ Another reason you might want to use this method is while writing scripts that w
 
 1. Download the makecutomfields.php and CallAPI.php files and place them in the directory which has the **scipts folder**, which containts the javascript file that is calling the php files.
 
-  ![image not available](https://github.com/Arcadier/Tutorials/blob/master/Simpler%20way%20of%20making%20Custom%20Fields/images/directoryForPhp.JPG "Directory Information")
+  <img align="center" src="https://github.com/Arcadier/Tutorials/blob/master/Simpler%20way%20of%20making%20Custom%20Fields/images/directoryForPhp.JPG">
+
 
 2. Copy paste the following function into the script you want to use it in.
 
