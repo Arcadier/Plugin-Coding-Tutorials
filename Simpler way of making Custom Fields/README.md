@@ -142,7 +142,7 @@ Console will print the following value:
 }
 ```
 
-If you use the [get user info](https://apiv2.arcadier.com/view/6410759/S17oxV7m/?version=latest#129fa6b1-1c39-4a41-b7b8-8aa7f2545394) API with user ID `d7996ffd-3244-431d-852a-55e1a9c7e3cc`, you will see the following:
+If you use the [get user information](https://apiv2.arcadier.com/view/6410759/S17oxV7m/?version=latest#129fa6b1-1c39-4a41-b7b8-8aa7f2545394) API with user ID `d7996ffd-3244-431d-852a-55e1a9c7e3cc`, you will see the following:
 ```javascript
 {
     "ID": "d7996ffd-3244-431d-852a-55e1a9c7e3cc",
