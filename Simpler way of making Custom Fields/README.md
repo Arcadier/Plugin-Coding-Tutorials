@@ -295,7 +295,7 @@ If you use the [get marketplace information](https://apiv2.arcadier.com/view/641
             "Code": "test-JV5UpgWcBL",
             "Name": "test",
             "Values": [
-                "My first custom field" //New Custom field created by function.
+                "My first custom field" //New Custom field created by the function.
             ]
         }
     ]
