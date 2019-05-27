@@ -99,7 +99,7 @@ var settings = {
 $.ajax(settings).done(function(response) { console.log(response); });
 ```
 
-##How to choose between the two methods
+## How to choose between the two methods
 The [Authentication API](https://apiv2.arcadier.com/?version=latest#546294a8-cf01-4543-a994-5929c5be2c41) is used when you need admin access from a page is not an admin-logged-in page. Example: a script running on the buyer page that creates a Custom Field using API, which requires Admin Auth. You cant use the ```getCookie()``` function, because that would get the buyer's token.
 
 The main problem with the [Authentication API](https://apiv2.arcadier.com/?version=latest#546294a8-cf01-4543-a994-5929c5be2c41) is that if written in JavaScript and executed on client side, then it exposes the `client_id` and `client_secret`. No one wants that. 
