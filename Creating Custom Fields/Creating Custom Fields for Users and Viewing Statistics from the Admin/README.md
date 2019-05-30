@@ -38,7 +38,7 @@ The following APIs were used in the making of this plugin,
 
 As the admin token is required to make the API calls, we use PHP to get the admin token. This is the only way to get the admin token with the plugin. 
 
-```
+```php
 include 'callAPI.php';
 
 ...
@@ -47,7 +47,7 @@ $admin_token = getAdminToken();
 ```
 
 updating the value in a custom field if the custom field already exists, the code follows to echo a succesful message to the front end when called.
-```
+```php
 if($customFieldExists){
 
   $data=[
@@ -71,7 +71,7 @@ if($customFieldExists){
 
 calling the API to create the custom field for the user who doesn't have the custom field data
 
-```
+```php
 else{
       // echo json_encode(["Entered else"])
       $cf_data = [
@@ -89,7 +89,7 @@ else{
 
 calling the API to update the value of the custom field linked to the user
 
-```
+```php
       $url = $baseUrl.'/api/v2/admins/'.$admin_token['UserId'].'/custom-field-definitions';
       
       $response = callAPI("POST",$admin_token['access_token'],$url,$cf_data);
@@ -122,14 +122,14 @@ In the front end, we display the age data in a tabular form. Since, the API call
 |Get all users|GET|https://{{your-marketplace}}.arcadier.io/api/v2/admins/{{adminID}}/users|Marketplace URL, Admin token, Admin id|
 
 Getting all the requirements to make the API calls
-```
+```javascript
  var token = getCookie('webapitoken');
     var baseURL = window.location.hostname;
     var adminID = document.getElementById("userGuid").value;
 ```
 
 Making the API calls and getting ages of all the marketplace users in a single array.
-```
+```javascript
  ages = [];
     $.ajax(settings).done(function (response) {
         records = response["Records"];
@@ -147,7 +147,7 @@ Making the API calls and getting ages of all the marketplace users in a single a
 ```
 
 Sorting the data in the display format
-```
+```javascript
 ageRangeLimit = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
     ageFrequency = []
     for (j = 0; j < ages.length; j++) {
@@ -165,7 +165,7 @@ ageRangeLimit = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
 
 Making the table which is going to be displayed
 
-```
+```javascript
 display = document.getElementById("display");
 
     var mini = document.createElement("td");
