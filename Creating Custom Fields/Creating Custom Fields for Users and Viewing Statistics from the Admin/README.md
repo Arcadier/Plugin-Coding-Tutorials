@@ -49,31 +49,28 @@ $admin_token = getAdminToken();
 updating the value in a custom field if the custom field already exists, the code follows to echo a succesful message to the front end when called.
 ```php
 if($customFieldExists){
-
   $data=[
     'ID' => $userID,
     'CustomFields' => [
       [
-      'Code' => $code,
-      'Values' => [ 
-        $Age
+        'Code' => $code,
+        'Values' => [ 
+          $Age
         ]
-        ]
+      ]
     ]
-      ];
-      
-      $url = $baseUrl.'/api/v2/users/'.$userID;
-      $response = callAPI("PUT",$admin_token['access_token'],$url,$data);
-      echo json_encode(['if',$code,$response]);
-      
-    }
+  ];
+
+  $url = $baseUrl.'/api/v2/users/'.$userID;
+  $response = callAPI("PUT",$admin_token['access_token'],$url,$data);
+  echo json_encode(['if',$code,$response]);
+}
 ```
 
 calling the API to create the custom field for the user who doesn't have the custom field data
 
 ```php
 else{
-      // echo json_encode(["Entered else"])
       $cf_data = [
         'Name'=>'age',
         'IsMandatory'=>false,
@@ -84,31 +81,31 @@ else{
         'IsSensitive'=>false,
         'Active'=>true
       ];
+    }
       
 ```
 
 calling the API to update the value of the custom field linked to the user
 
 ```php
-      $url = $baseUrl.'/api/v2/admins/'.$admin_token['UserId'].'/custom-field-definitions';
-      
-      $response = callAPI("POST",$admin_token['access_token'],$url,$cf_data);
-      
-      $data = [
-        'ID'=>$userID,
-        'CustomFields'=>[
-          [
-            'Code'=>$response['Code'],
-            'Values'=>[
-              $Age
-              ]
-              ]
-              ]
-            ];
-            $url = $baseUrl.'/api/v2/users/'.$userID;
-            $response2 = callAPI("PUT",$admin_token['access_token'],$url,$data);
-            echo json_encode(['else',$response,$response2]);
-          }
+    $url = $baseUrl.'/api/v2/admins/'.$admin_token['UserId'].'/custom-field-definitions';
+    $response = callAPI("POST",$admin_token['access_token'],$url,$cf_data);
+
+    $data = [
+      'ID'=>$userID,
+      'CustomFields'=>[
+        [
+          'Code'=>$response['Code'],
+          'Values'=>[
+            $Age
+          ]
+        ]
+      ]  
+    ];
+    $url = $baseUrl.'/api/v2/users/'.$userID;
+    $response2 = callAPI("PUT",$admin_token['access_token'],$url,$data);
+    echo json_encode(['else',$response,$response2]);
+}
 ```
 
 
@@ -143,7 +140,7 @@ Making the API calls and getting ages of all the marketplace users in a single a
                 }
             }
         }
-    })
+    });
 ```
 
 Sorting the data in the display format
@@ -156,8 +153,6 @@ ageRangeLimit = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
             if (ages[j] < ageRangeLimit[i + 1] && ages[j] >= ageRangeLimit[i]) {
                 // console.log("entered outer if");
                 ageFrequency[i] += 1;
-
-
             }
         }
     }
