@@ -64,14 +64,17 @@ Once we have this set up, let’s start by coding the simplest “Hello World”
 <!-- header end -->
 
 <div>
-  <p id="test">Hello World</p>
-  <button id="try"> Click me! </button>
+  <p id="test">
+    Hello World
+  </p>
+  <button id="try">
+    Click me!
+  </button>
 </div>
 
 <!-- footer begin -->
 <script type="text/javascript" src="scripts/script.js"></script>
 <!-- footer end -->
-
 ```
 Save the code above as “index.html” inside the “html” folder of “admin”.
 
