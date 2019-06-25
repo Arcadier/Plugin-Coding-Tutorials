@@ -64,16 +64,16 @@ Once we have this set up, let’s start by coding the simplest “Hello World”
 <!-- header end -->
 
 <div>
-  <p id="test">
+  <p id = "test">
     Hello World
   </p>
-  <button id="try">
+  <button id = "try">
     Click me!
   </button>
 </div>
 
 <!-- footer begin -->
-<script type="text/javascript" src="scripts/script.js"></script>
+<script type = "text/javascript" src = "scripts/script.js"></script>
 <!-- footer end -->
 ```
 Save the code above as “index.html” inside the “html” folder of “admin”.
@@ -89,7 +89,7 @@ Save the code above as “script.js” inside the “scripts” folder of “adm
 button {
   height: 60px;
   border-radius: 10px;
-  border-color: #00F;
+  border-color: #0000FF;
 }
 ```
 Save the code above as “style.css” inside the “css” folder of “admin”.
