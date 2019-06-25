@@ -116,9 +116,11 @@ Login on the Admin Portal of your sandbox marketplace. Navigate to Plug-Ins on t
 
 ![Screen Shot 2019-06-25 at 1100](https://user-images.githubusercontent.com/6611854/60080657-e836b780-9762-11e9-8181-7c4bc3920500.png)
 
+Install the Plug-In and this should redirect you to the completed page of Hello World.
+
 ![Screen Shot 2019-06-25 at 11](https://user-images.githubusercontent.com/6611854/60080737-14523880-9763-11e9-8890-542e1166e8c6.png)
 
-Install the Plug-In and this should redirect you to the completed page of Hello World. Check to see that the button does indeed change the background color of your “Hello World” text to blue.
+Check to see that the button does indeed change the background color of your “Hello World” text to blue.
 
 <img width="1435" alt="Screen Shot 2019-06-25 at 11 06 27 AM" src="https://user-images.githubusercontent.com/6611854/60080765-1f0ccd80-9763-11e9-95d9-88876200fa5c.png">
 
