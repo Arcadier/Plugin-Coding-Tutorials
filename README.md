@@ -159,8 +159,8 @@ Install the Plug-In and this should redirect you to the completed page of Hello 
 
 Check to see that the button does indeed change the background color of your “Hello World” text to blue.
 
-<img width="1435" alt="Screen Shot 2019-06-25 at 11 06 27 AM" src="https://user-images.githubusercontent.com/6611854/60080765-1f0ccd80-9763-11e9-95d9-88876200fa5c.png">
+<img width="1431" alt="Screen Shot 2019-06-28 at 2 50 38 PM" src="https://user-images.githubusercontent.com/6611854/60323267-30004d80-99b4-11e9-91a9-afca7119bbb7.png">
 
-<img width="1436" alt="Screen Shot 2019-06-25 at 11 06 47 AM" src="https://user-images.githubusercontent.com/6611854/60080769-203dfa80-9763-11e9-9c2b-0fe2f3b10f3f.png">
+<img width="1432" alt="Screen Shot 2019-06-28 at 2 50 54 PM" src="https://user-images.githubusercontent.com/6611854/60323270-31ca1100-99b4-11e9-99fc-80c71ac3fa81.png">
 
 You can now create multiple Plug-Ins based on your own unique codes!
