@@ -40,7 +40,7 @@ Give the Plug-In an appropriate name and description and click on “Save” to 
 
 Now the Plug-In should appear in the bottom of the Developer's dashboard. Click on the edit button on its right to upload the Plug-In’s code. 
 
-![Screen Shot 2019-06-25 at 344](https://user-images.githubusercontent.com/6611854/60079911-727e1c00-9761-11e9-8f3e-e53da0fce27d.png)
+<img width="1435" alt="Screen Shot 2019-06-28 at 2 37 17 PM" src="https://user-images.githubusercontent.com/6611854/60322742-caf82800-99b2-11e9-845f-f0f6c7ddafd0.png">
 
 This should direct you to a page that allows you to edit the details of the Plug-In. Keep this page steady as we will return to it once we finish the code.
 
@@ -50,7 +50,7 @@ This should direct you to a page that allows you to edit the details of the Plug
 
 In order to upload a code, you have to have a code to begin with. First of all, we will need a locating folder for our code file. To avoid any issues with our software, the structure of your internal folder should follow a specific outline. Begin by creating a folder and naming it something parallel to the function of the Plug-In. In this example, we will name the root folder “Hello World”. Inside this root folder, create two folders named “admin” and “user” and in BOTH folders, create three folders named “html”, “css”, and “scripts”. You may follow the pictures below as a guideline. 
 
-![Screen Shot 2019-06-24 at 4](https://user-images.githubusercontent.com/6611854/60080046-bd982f00-9761-11e9-9541-a8ae32ba71d2.png)
+<img width="1437" alt="Screen Shot 2019-06-28 at 2 36 51 PM" src="https://user-images.githubusercontent.com/6611854/60322617-7f457e80-99b2-11e9-827c-81b727532530.png">
 
 ![Screen Shot 2019-06-24 at 5](https://user-images.githubusercontent.com/6611854/60080049-bec95c00-9761-11e9-894c-07fb22ddc9aa.png)
 
@@ -64,12 +64,12 @@ Once we have this set up, let’s start by coding the simplest “Hello World”
 <!-- header end -->
 
 <div>
-  <p id = "test">
-    Hello World
-  </p>
-  <button id = "try">
-    Click me!
-  </button>
+	<p id = "banner-message">
+		Hello World
+	</p>
+	<button>
+		Click me!
+	</button>
 </div>
 
 <!-- footer begin -->
@@ -79,18 +79,55 @@ Once we have this set up, let’s start by coding the simplest “Hello World”
 Save the code above as “index.html” inside the “html” folder of “admin”.
 
 ```javascript
-  $("#try").click(function() {
-  	document.getElementById("test").setAttribute("style", "background-color: blue;");
-  });
+// find elements
+var banner = $("#banner-message")
+var button = $("button")
+
+// handle click and add class
+button.on("click", function(){
+  banner.addClass("alt")
+});
 ```
 Save the code above as “script.js” inside the “scripts” folder of “admin”.
 
 ```CSS
-button {
-  height: 60px;
-  border-radius: 10px;
-  border-color: #0000FF;
-}
+body {
+	background: #20262E;
+	padding: 20px;
+	font-family: Helvetica;
+  }
+  
+  #banner-message {
+	background: #fff;
+	border-radius: 4px;
+	padding: 20px;
+	font-size: 25px;
+	text-align: center;
+	transition: all 0.2s;
+	margin: 0 auto;
+	width: 300px;
+  }
+  
+  button {
+	background: #0084ff;
+	border: none;
+	border-radius: 5px;
+	padding: 8px 14px;
+	font-size: 15px;
+	color: #fff;
+  }
+  
+  #banner-message.alt {
+	background: #0084ff;
+	color: #fff;
+	margin-top: 40px;
+	width: 200px;
+  }
+  
+  #banner-message.alt button {
+	background: #fff;
+	color: #000;
+  }
 ```
 Save the code above as “style.css” inside the “css” folder of “admin”.
 
@@ -104,11 +141,11 @@ Understandably, the “user” folder is empty for now. However, zip the “admi
 
 Going back to the Package Details page, upload that .zip file on the Developer Dashboard by clicking on the blue “Upload” button under the “File Management” tab. Once the Package Name, Package Description, and File Management are all completed, click “Save” and the Plug-In will be available in your sandbox marketplace. 
 
-![Screen Shot 2019-06-25 at 2000](https://user-images.githubusercontent.com/6611854/60080590-cccbac80-9762-11e9-849c-ca7f979a0491.png)
+<img width="1435" alt="Screen Shot 2019-06-28 at 2 37 33 PM" src="https://user-images.githubusercontent.com/6611854/60322655-92584e80-99b2-11e9-8d26-e83232230ef6.png">
 
 Make sure that the Plug-In is set to “Show” and “Enable”.
 
-![Screen Shot 2019-06-25 at 333](https://user-images.githubusercontent.com/6611854/60080606-d3f2ba80-9762-11e9-9fe5-75bb8655e5f4.png)
+<img width="1435" alt="Screen Shot 2019-06-28 at 2 37 17 PM" src="https://user-images.githubusercontent.com/6611854/60322718-bae04880-99b2-11e9-9f49-c58f5cd3c0b2.png">
 
 Login on the Admin Portal of your sandbox marketplace. Navigate to Plug-Ins on the left pane. Under the “Available” tab, find your “Hello World” Plug-In. 
 
