@@ -120,7 +120,7 @@ if($("#merchantId") && $("#merchantId").length){
 } 
 else {
   if($("#userId") && $("#userId").length && $('body').hasClass('page-cart')){
-    if('input').each(function(){
+    $("input").each(function(){
       if($(this).attr('value') == 'bespoke'){
         //do something
       }
