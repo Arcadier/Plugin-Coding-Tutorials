@@ -4,6 +4,7 @@ If you are not familiar with Arcadier’s system or creation of Plug-Ins, then y
 place to learn all you need to become a plug-in developer.
 We have documentation on our:
 * [APIs](https://apiv2.arcadier.com)
+* [Front-End Documentation](https://api.arcadier.com/intro-front-end)
 
 We have Github repositories for:
 * [Plug in demos](https://github.com/Arcadier/Plug-In-Demos)
