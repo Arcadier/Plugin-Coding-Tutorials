@@ -7,7 +7,7 @@ We have documentation on our:
 * [Front-End Documentation](https://api.arcadier.com/intro-front-end)
 
 We have Github repositories for:
-* [Plug in demos](https://github.com/Arcadier/Plug-In-Demos)
+* [Plug In Sample Code](https://github.com/Arcadier/Plug-In-Demos)
 * [Developer Community Support](https://github.com/Arcadier/Developer-Community-Support)
 * [Tutorials and Guides](https://github.com/Arcadier/Tutorials)
 
