@@ -61,7 +61,7 @@ The `Code` is automatically generated and will always have what you give as `Nam
 
 `"MinValue"` and `"MaxValue"` are the minimum and maximum value a number can have if `number` is chosen as `"DataInputType"`.
 
-`"ReferenceTable"` for now can hold `"Implementations"`, `"Users"` and `"Items"`.
+`"ReferenceTable"` for now can hold `"Implementations"`, `"Users"`, `"Items"` and `"Orders"`.
 * Implementations will make the custom field retrivable by Marketplace API's.
 * Users will make it retrievable by Accounts API's.
 * Items will make it retrievable by Items API's.
