@@ -12,7 +12,7 @@ If you want that CF to store information about the marketplace and retrievable b
 
 If you want a CF to be storing information for a specific user, then you choose the ReferenceTable to be "Users".
 
-The same logic applies for items.
+The same logic applies for items and orders.
 
 <h3>But Why?</h3>
 <h5>API's</h5>
