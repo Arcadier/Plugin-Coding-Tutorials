@@ -82,7 +82,7 @@ This is only relevant for dropdown and checkbox where you would have to specify 
 Knowing this, these are the steps to assigning a CF to something (marketplace, item, user, order):
 1. Create an object 
 ```javascript
-var object = { 
+var settings = { 
   "Name": "string",
   "DataInputType": "string",
   "DataRegex": "string",
@@ -112,7 +112,7 @@ var headers = {
             "Content-Type": "application/json",
             "Authorization": "Bearer " + token
         },
-        "data": JSON.stringify(user_data)
+        "data": JSON.stringify(settings)
     };
 ```
 Let Ajax do the magic:
