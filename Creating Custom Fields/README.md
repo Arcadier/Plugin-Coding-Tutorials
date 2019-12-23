@@ -66,6 +66,7 @@ The `Code` is automatically generated and will always have what you give as `Nam
 * Implementations will make the custom field retrivable by Marketplace API's.
 * Users will make it retrievable by Accounts API's.
 * Items will make it retrievable by Items API's.
+* Orders will make it retrivable by Order & Transaction APIs.
 
 `"DataFieldType"` is either `"string"`, or `"integer"`.
 
@@ -78,7 +79,8 @@ The `Code` is automatically generated and will always have what you give as `Nam
 ```
 This is only relevant for dropdown and checkbox where you would have to specify options.
 
-Knowing this, create an object 
+Knowing this, these are the steps to assigning a CF to something (marketplace, item, user, order):
+1. Create an object 
 ```javascript
 var object = { 
   "Name": "string",
@@ -99,9 +101,9 @@ var object = {
   ]
 };
 ```
-Stringify it with `var data = JSON.stringify(object)`
+2. Stringify it with `var data = JSON.stringify(object)`
 
-Have the admin token, adminID and marketplace URL ready. Prepare the headers:
+3. Have the admin token, adminID and marketplace URL ready. Prepare the headers:
 ```javascript
 var headers = {
         "url": "https://" + baseURL + "/api/v2/admins/" + adminID + "/custom-field-definitions",
@@ -161,6 +163,9 @@ $.ajax(settings).done(function (response) {
   console.log(response);
 });
 ```
+
+Now, if you call [Get Marketplace Info](https://apiv2.arcadier.com/?version=latest#928eac76-5bee-4bf3-9484-293551f95cde). The response will have an additional field which is the custom field, with the value that you chose to store in it.
+
 If you chose the ReferenceTable of the custom field to be `"Users"`, then your custom field will be affected by **User API's**.
 
 After creating the custom field, you will receive the custom field's `Code` in the response: `response.Code`. 
@@ -194,3 +199,4 @@ $.ajax(settings).done(function (response) {
   console.log(response);
 });
 ```
+Now, if you call [Get User Info](https://apiv2.arcadier.com/?version=latest#129fa6b1-1c39-4a41-b7b8-8aa7f2545394). The response will have an additional field which is the custom field, with the value that you chose to store in it.
