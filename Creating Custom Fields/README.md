@@ -21,7 +21,8 @@ It's for API's to know when its relevant to fetch data from a CF. If the CF is i
 
 If you call the [Get Marketplace Info](https://apiv2.arcadier.com/#928eac76-5bee-4bf3-9484-293551f95cde) API, it will fetch data from CF's that are associated with the marketplace only and ignore CFs of User's.
 
-It just makes the life of those API's easier. Who doesn't like happy, fast responding API's?
+If you call the [Get Order Details by Order ID](https://apiv2.arcadier.com/?version=latest#aa631d6e-110c-43a9-a6c8-f5e03a5976a3) API, it will fetch data from CF's that are associated with that order.
+
 
 # How to create Custom fields
 > "That's honestly the easiest thing I've learnt when I joined Arcadier" ~ Tanoo, Pre-Sales Engineer at Arcadier
