@@ -40,6 +40,7 @@ Please note:
 An example of a Plug-In Sample Code that uses PHP is the [Discount Coupon Generator](https://github.com/Arcadier/Discount-Coupon-Generator).
 
 **Very Important**
+
 Two PHP files are **automatically generated** when the source code is uploaded on the Developer Dashboard:
 * [admin_token.php](https://github.com/Arcadier/Discount-Coupon-Generator/blob/master/user/admin_token.php) - When automatically generated, ```$client_id``` and ```$client_secret``` will be assigned their correct values for your marketplace automatically.
 * [callAPI.php](https://github.com/Arcadier/Discount-Coupon-Generator/blob/master/user/callAPI.php)
